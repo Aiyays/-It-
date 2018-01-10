@@ -19,5 +19,25 @@
 	以后删除9张照片并记录通过验证的人的 
 	
 	
+	PATH C:\Emgu\emgucv-windesktop 3.3.0.2824\bin;%PATH%
 	
+	C:\Emgu\emgucv-windesktop 3.3.0.2824\bin
 	
+数据库管理
+
+学生信息表--StudentInformation
+	学号	     StudentId     int(20)   not null  key 
+	姓名	     StudentName   char(20)  not null 
+	所属公寓名称 ApartmentName char(20)  not null 
+	学院	     SchoolName    char(20)  not null
+	辅导员工号	 InstructorNub char(20)  not null
+	寝室号	     DormNumber    int(6)    not null
+	自己的照片   StudentPhoto  char()    not null 
+	
+教职工信息表--TeachingStaff
+	姓名     name      char(20)      not null 
+	职工类型 StaffType char(10) not null 
+	职工编号 StaffNub  int(20)  not null   key 
+	职工照片 StaffPhoto char()  not null;
+	
+学生状态表--
