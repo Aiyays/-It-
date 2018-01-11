@@ -10,9 +10,14 @@
 一个客户端---->>>>一个Winform程序
 第一个功能
 	有三块屏幕-->>第一块：实时监测，显示与摄像头实时跟踪 
+				 ///需要用到打开本地摄像头的方法
+				 ///需要用到技术  WPF   
 				  第二块：显示已授权用户并且每次往后,依次添加,当有相同的
+				 ///需要学习技术  ListView
 				  第三块：显示未授权用户,依次添加,当有相同的
-第二个功能
+				 ///需要学习技术  ListView
+				  
+第二个功能 
 	麻将桌一样的签到-->>首先需要一个 listView,
 	
 	监控画面上实时显示授权对画面进行抓拍（需要一个人脸检测的SDK）摄像机捕捉到人脸时会自动触发的一个事件（连拍10张-->防止一张取样不准确）然后对比,当10张中有一张成功,就算通过验证
@@ -23,7 +28,7 @@
 	
 	C:\Emgu\emgucv-windesktop 3.3.0.2824\bin
 	
-数据库管理
+数据库管理---FaceRecognition
 
 学生信息表--StudentInformation
 	学号	     StudentId     int(20)   not null  key 
@@ -32,12 +37,23 @@
 	学院	     SchoolName    char(20)  not null
 	辅导员工号	 InstructorNub char(20)  not null
 	寝室号	     DormNumber    int(6)    not null
-	自己的照片   StudentPhoto  char()    not null 
+	自己的照片   StudentPhoto  char(20)  not null 
 	
 教职工信息表--TeachingStaff
-	姓名     name      char(20)      not null 
-	职工类型 StaffType char(10) not null 
-	职工编号 StaffNub  int(20)  not null   key 
-	职工照片 StaffPhoto char()  not null;
+	姓名     Staffname  char(20)      not null 
+	职工类型 StaffType  char(10) 	  not null 
+	职工编号 StaffNub   int(20)  	  not null   key 
+	职工照片 StaffPhoto char()  	  not null
 	
-学生状态表--
+学生状态表----StudentState
+	学号    StudentId      int(20) 	  not null key
+	状态	StudentState   char(4)    not null 
+
+学生记录表----StudentRecord
+	序号	OrderID		int(255) not null	key
+	学号    StudentId   int(20)  not null 
+  	类型	StateType   char(4)	 not null 
+	时间	datetime			not null 
+	
+	
+	
