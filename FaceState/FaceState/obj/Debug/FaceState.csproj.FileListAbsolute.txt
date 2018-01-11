@@ -8,3 +8,12 @@ C:\Users\Administrator\source\repos\FaceState\FaceState\obj\Debug\FaceState.cspr
 C:\Users\Administrator\source\repos\FaceState\FaceState\obj\Debug\FaceState.csproj.CoreCompileInputs.cache
 C:\Users\Administrator\source\repos\FaceState\FaceState\obj\Debug\FaceState.exe
 C:\Users\Administrator\source\repos\FaceState\FaceState\obj\Debug\FaceState.pdb
+D:\Work\-It-\FaceState\FaceState\bin\Debug\FaceState.exe.config
+D:\Work\-It-\FaceState\FaceState\obj\Debug\FaceState.exe
+D:\Work\-It-\FaceState\FaceState\obj\Debug\FaceState.pdb
+D:\Work\-It-\FaceState\FaceState\bin\Debug\FaceState.exe
+D:\Work\-It-\FaceState\FaceState\bin\Debug\FaceState.pdb
+D:\Work\-It-\FaceState\FaceState\obj\Debug\FaceState.csprojResolveAssemblyReference.cache
+D:\Work\-It-\FaceState\FaceState\obj\Debug\FaceState.Form1.resources
+D:\Work\-It-\FaceState\FaceState\obj\Debug\FaceState.Properties.Resources.resources
+D:\Work\-It-\FaceState\FaceState\obj\Debug\FaceState.csproj.GenerateResource.Cache
