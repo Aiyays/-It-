@@ -1,0 +1,10 @@
+C:\Users\Administrator\source\repos\FaceState\FaceState\bin\Debug\FaceState.exe.config
+C:\Users\Administrator\source\repos\FaceState\FaceState\bin\Debug\FaceState.exe
+C:\Users\Administrator\source\repos\FaceState\FaceState\bin\Debug\FaceState.pdb
+C:\Users\Administrator\source\repos\FaceState\FaceState\obj\Debug\FaceState.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\source\repos\FaceState\FaceState\obj\Debug\FaceState.Form1.resources
+C:\Users\Administrator\source\repos\FaceState\FaceState\obj\Debug\FaceState.Properties.Resources.resources
+C:\Users\Administrator\source\repos\FaceState\FaceState\obj\Debug\FaceState.csproj.GenerateResource.Cache
+C:\Users\Administrator\source\repos\FaceState\FaceState\obj\Debug\FaceState.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\source\repos\FaceState\FaceState\obj\Debug\FaceState.exe
+C:\Users\Administrator\source\repos\FaceState\FaceState\obj\Debug\FaceState.pdb
