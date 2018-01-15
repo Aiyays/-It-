@@ -35,7 +35,7 @@ namespace FaceState
 
             //    this.AutoScrollMinSize = new Size(0, 1000);///滚动框
 
-             a = new DrawHome("70", "70", new string[] { "633" });
+             a = new DrawHome("70", "70", new string[] { "633", "王舒婷", "张熙贤", "王舒婷", "张熙贤" });
             a.Draw(imageList1,imageList2, Graphics.FromHwnd(panel1.Handle));
          
             //RunningEngine.Initialization.start();
@@ -79,11 +79,17 @@ namespace FaceState
 
         private void button2_Click(object sender, EventArgs e)
         {
-            
-            a.Chionce(20);
-            Graphics.FromHwnd(panel1.Handle).Clear(Color.WhiteSmoke);
-            a.Draw(imageList1, imageList2, Graphics.FromHwnd(panel1.Handle));
 
+            try
+            {
+                a.Chionce(20);
+                Graphics.FromHwnd(panel1.Handle).Clear(Color.WhiteSmoke);
+                a.Draw(imageList1, imageList2, Graphics.FromHwnd(panel1.Handle));
+            }
+            catch
+            {
+                MessageBox.Show("你特么能不能先点按钮 1 ");
+            }
             // RunningEngine.Initialization.start();
             // RunningEngine.Initialization.start();
             // this.AutoScrollMinSize = new Size(35, position.Y + 1000);///滚动框

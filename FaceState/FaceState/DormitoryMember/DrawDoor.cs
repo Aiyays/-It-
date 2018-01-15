@@ -25,7 +25,7 @@ namespace FaceState
 
         }
 
-        public override string ImageAdress => @"C:\Users\Administrator\Desktop\PNG图片\2.png";
+        public override string ImageAdress => @"PNG图片\2.png";
 
         public override int StringPixeX => ImagePixeX + 30;
 

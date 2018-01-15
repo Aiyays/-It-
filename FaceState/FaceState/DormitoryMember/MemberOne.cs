@@ -14,7 +14,7 @@ namespace FaceState.DormitoryMember
 
         }
 
-        public override string ImageAdress => @"C:\Users\Administrator\Desktop\PNG图片\1.png";
+        public override string ImageAdress => @"PNG图片\1.png";
 
         public override int StringPixeX => ImagePixeX;
 
