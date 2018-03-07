@@ -1,11 +1,11 @@
-﻿using System;
-using System.Web;
+﻿using  System;
+using  System.Web;
 
 namespace Maticsoft.Common
 {
 	/// <summary>
 	/// 缓存相关的操作类
-    /// Copyright (C) Maticsoft
+    /// Copyright (C)Maticsoft
 	/// </summary>
 	public class DataCache
 	{

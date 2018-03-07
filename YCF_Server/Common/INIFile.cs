@@ -1,13 +1,13 @@
-﻿using System;
-using System.Runtime.InteropServices;
-using System.Text;
-using System.IO;
+﻿using  System;
+using  System.Runtime.InteropServices;
+using  System.Text;
+using  System.IO;
 
 namespace Maticsoft.Common
 {
     /// <summary>
     /// INI文件读写类。
-    /// Copyright (C) Maticsoft
+    /// Copyright (C)Maticsoft
     /// </summary>
 	public class INIFile
 	{

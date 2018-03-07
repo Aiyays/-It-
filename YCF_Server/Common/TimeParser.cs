@@ -1,6 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using  System;
+using  System.Collections.Generic;
+using  System.Text;
 
 namespace Maticsoft.Common
 {
@@ -32,15 +32,15 @@ namespace Maticsoft.Common
         #endregion
 
         #region 返回时间差
-        public static string DateDiff(DateTime DateTime1, DateTime DateTime2)
+        public static string DateDiff(DateTime DateTime1, DateTime DateTime)
         {
             string dateDiff = null;
             try
             {
                 //TimeSpan ts1 = new TimeSpan(DateTime1.Ticks);
-                //TimeSpan ts2 = new TimeSpan(DateTime2.Ticks);
+                //TimeSpan ts2 = new TimeSpan(DateTime.Ticks);
                 //TimeSpan ts = ts1.Subtract(ts2).Duration();
-                TimeSpan ts = DateTime2 - DateTime1;
+                TimeSpan ts = DateTime - DateTime1;
                 if (ts.Days >=1)
                 {
                     dateDiff = DateTime1.Month.ToString() + "月" + DateTime1.Day.ToString() + "日";

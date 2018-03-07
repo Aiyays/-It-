@@ -1,12 +1,12 @@
-﻿using System.Reflection;
-using System.Runtime.CompilerServices;
+﻿using  System.Reflection;
+using  System.Runtime.CompilerServices;
 
-[assembly: AssemblyTitle("Maticsoft.Common")]
-[assembly: AssemblyDescription("Common Library By Maticsoft")]
+[assembly: AssemblyTitle("")]
+[assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("Maticsoft")]
-[assembly: AssemblyCompany("动软卓越（北京）科技有限公司")]
-[assembly: AssemblyProduct("Maticsoft.Common")]
-[assembly: AssemblyCopyright("Copyright (C) Maticsoft 2004-2012")]
+[assembly: AssemblyCompany("")]
+[assembly: AssemblyProduct("")]
+[assembly: AssemblyCopyright("")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]	
 [assembly: AssemblyVersion("3.5.0")]	

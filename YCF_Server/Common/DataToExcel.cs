@@ -1,16 +1,16 @@
-﻿using System;
-using System.Diagnostics;
-using System.Collections;
-using System.Data;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
-using Excel;
+﻿using  System;
+using  System.Diagnostics;
+using  System.Collections;
+using  System.Data;
+using  System.Web;
+using  System.Web.UI;
+using  System.Web.UI.WebControls;
+using  Excel;
 namespace Maticsoft.Common
 {
     /// <summary>
     /// 操作EXCEL导出数据报表的类
-    /// Copyright (C) Maticsoft
+    /// Copyright (C)Maticsoft
     /// </summary>
     public class DataToExcel
     {

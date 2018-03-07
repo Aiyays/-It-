@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="12.0">
   <PropertyGroup>
     <ProjectType>Local</ProjectType>
     <ProductVersion>9.0.30729</ProductVersion>
@@ -37,7 +37,7 @@
     </SccProvider>
     <OldToolsVersion>3.5</OldToolsVersion>
     <IsWebBootstrapper>true</IsWebBootstrapper>
-    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <PublishUrl>http://localhost/Maticsoft.DAL/</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Web</InstallFrom>
@@ -52,6 +52,7 @@
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <OutputPath>bin\Debug\</OutputPath>
@@ -76,6 +77,7 @@
     <DebugType>full</DebugType>
     <ErrorReport>prompt</ErrorReport>
     <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <OutputPath>bin\Release\</OutputPath>
@@ -100,6 +102,7 @@
     <DebugType>none</DebugType>
     <ErrorReport>prompt</ErrorReport>
     <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="MySql.Data, Version=5.1.5.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
@@ -138,61 +141,75 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="服务器DAL\UserInfo.cs" />
+    <Compile Include="服务器DAL\EquipmentType.cs" />
+    <Compile Include="服务器DAL\FeedBack.cs" />
+    <Compile Include="服务器DAL\Friends.cs" />
+    <Compile Include="服务器DAL\Manufacturers.cs" />
+    <Compile Include="服务器DAL\Nation.cs" />
+    <Compile Include="服务器DAL\Nation_Taboo.cs" />
+    <Compile Include="服务器DAL\OLicense.cs" />
+    <Compile Include="服务器DAL\Operator.cs" />
+    <Compile Include="服务器DAL\OperatorDatabase.cs" />
+    <Compile Include="服务器DAL\Operator_License.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="SysManage.cs" />
-    <Compile Include="Apartment.cs" />
-    <Compile Include="ApartmentArea.cs" />
-    <Compile Include="ApartmentType.cs" />
-    <Compile Include="AssessRecord.cs" />
-    <Compile Include="Bed.cs" />
-    <Compile Include="Blood.cs" />
-    <Compile Include="Department.cs" />
-    <Compile Include="Drug.cs" />
-    <Compile Include="DrugType.cs" />
-    <Compile Include="Employee.cs" />
-    <Compile Include="EmpRankTitle.cs" />
-    <Compile Include="EmpSchedule.cs" />
-    <Compile Include="Equipment.cs" />
-    <Compile Include="ExaminationQuestion.cs" />
-    <Compile Include="Food.cs" />
-    <Compile Include="FoodLabel.cs" />
-    <Compile Include="FoodType.cs" />
-    <Compile Include="GetDrug.cs" />
-    <Compile Include="GroupLader.cs" />
-    <Compile Include="Label.cs" />
-    <Compile Include="LevelType.cs" />
-    <Compile Include="Options.cs" />
-    <Compile Include="Patient.cs" />
-    <Compile Include="PensnonalDrug.cs" />
-    <Compile Include="PersonalEquipment.cs" />
-    <Compile Include="PersonalService.cs" />
-    <Compile Include="PostureHabit.cs" />
-    <Compile Include="PrivateGoods.cs" />
-    <Compile Include="RankTitle.cs" />
-    <Compile Include="RemindRecord.cs" />
-    <Compile Include="Respiratory.cs" />
-    <Compile Include="Role.cs" />
-    <Compile Include="Scantron.cs" />
-    <Compile Include="Schedule.cs" />
-    <Compile Include="ScheduleCount.cs" />
-    <Compile Include="Service.cs" />
-    <Compile Include="ServiceLabel.cs" />
-    <Compile Include="ServiceNote.cs" />
-    <Compile Include="ServiceRecord.cs" />
-    <Compile Include="ServiceType.cs" />
-    <Compile Include="SLabel.cs" />
-    <Compile Include="SLevel.cs" />
-    <Compile Include="sysdiagrams.cs" />
-    <Compile Include="Temperature.cs" />
-    <Compile Include="Title.cs" />
-    <Compile Include="TransferClass.cs" />
-    <Compile Include="UserFunctionModule.cs" />
-    <Compile Include="UserPrivilege.cs" />
-    <Compile Include="UserRole.cs" />
-    <Compile Include="Week.cs" />
-    <Compile Include="Weight.cs" />
+    <Compile Include="服务器DAL\Protocol.cs" />
+    <Compile Include="服务器DAL\sysdiagrams.cs" />
+    <Compile Include="服务器DAL\SysManage.cs" />
+    <Compile Include="服务器DAL\TabooTable.cs" />
+    <Compile Include="服务器DAL\User_Operator.cs" />
+    <Compile Include="机构端DAL\Apartment.cs" />
+    <Compile Include="机构端DAL\ApartmentArea.cs" />
+    <Compile Include="机构端DAL\ApartmentType.cs" />
+    <Compile Include="机构端DAL\AssessRecord.cs" />
+    <Compile Include="机构端DAL\Bed.cs" />
+    <Compile Include="机构端DAL\Blood.cs" />
+    <Compile Include="机构端DAL\Department.cs" />
+    <Compile Include="机构端DAL\Drug.cs" />
+    <Compile Include="机构端DAL\DrugType.cs" />
+    <Compile Include="机构端DAL\Employee.cs" />
+    <Compile Include="机构端DAL\EmpRankTitle.cs" />
+    <Compile Include="机构端DAL\EmpSchedule.cs" />
+    <Compile Include="机构端DAL\Equipment.cs" />
+    <Compile Include="机构端DAL\ExaminationQuestion.cs" />
+    <Compile Include="机构端DAL\Food.cs" />
+    <Compile Include="机构端DAL\FoodLabel.cs" />
+    <Compile Include="机构端DAL\FoodType.cs" />
+    <Compile Include="机构端DAL\GetDrug.cs" />
+    <Compile Include="机构端DAL\GroupLader.cs" />
+    <Compile Include="机构端DAL\Label.cs" />
+    <Compile Include="机构端DAL\LevelType.cs" />
+    <Compile Include="机构端DAL\Options.cs" />
+    <Compile Include="机构端DAL\Patient.cs" />
+    <Compile Include="机构端DAL\PensnonalDrug.cs" />
+    <Compile Include="机构端DAL\PersonalEquipment.cs" />
+    <Compile Include="机构端DAL\PersonalService.cs" />
+    <Compile Include="机构端DAL\PostureHabit.cs" />
+    <Compile Include="机构端DAL\PrivateGoods.cs" />
+    <Compile Include="机构端DAL\RankTitle.cs" />
+    <Compile Include="机构端DAL\RemindRecord.cs" />
+    <Compile Include="机构端DAL\Respiratory.cs" />
+    <Compile Include="机构端DAL\Role.cs" />
+    <Compile Include="机构端DAL\Scantron.cs" />
+    <Compile Include="机构端DAL\Schedule.cs" />
+    <Compile Include="机构端DAL\ScheduleCount.cs" />
+    <Compile Include="机构端DAL\Service.cs" />
+    <Compile Include="机构端DAL\ServiceLabel.cs" />
+    <Compile Include="机构端DAL\ServiceNote.cs" />
+    <Compile Include="机构端DAL\ServiceRecord.cs" />
+    <Compile Include="机构端DAL\ServiceType.cs" />
+    <Compile Include="机构端DAL\SLabel.cs" />
+    <Compile Include="机构端DAL\SLevel.cs" />
+    <Compile Include="机构端DAL\Temperature.cs" />
+    <Compile Include="机构端DAL\Title.cs" />
+    <Compile Include="机构端DAL\TransferClass.cs" />
+    <Compile Include="机构端DAL\UserFunctionModule.cs" />
+    <Compile Include="机构端DAL\UserPrivilege.cs" />
+    <Compile Include="机构端DAL\UserRole.cs" />
+    <Compile Include="机构端DAL\Week.cs" />
+    <Compile Include="机构端DAL\Weight.cs" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
@@ -221,6 +238,7 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PreBuildEvent>
