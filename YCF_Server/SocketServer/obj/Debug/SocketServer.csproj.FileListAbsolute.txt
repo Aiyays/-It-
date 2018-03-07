@@ -1,0 +1,6 @@
+F:\GogsGit\YCF_Server\SocketServer\bin\Debug\GD_AlarmCenter.SocketServer.dll
+F:\GogsGit\YCF_Server\SocketServer\bin\Debug\GD_AlarmCenter.SocketServer.pdb
+F:\GogsGit\YCF_Server\SocketServer\obj\Debug\SocketServer.csproj.CoreCompileInputs.cache
+F:\GogsGit\YCF_Server\SocketServer\obj\Debug\GD_AlarmCenter.SocketServer.dll
+F:\GogsGit\YCF_Server\SocketServer\obj\Debug\GD_AlarmCenter.SocketServer.pdb
+F:\GogsGit\YCF_Server\SocketServer\obj\Debug\SocketServer.csprojResolveAssemblyReference.cache

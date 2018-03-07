@@ -1,0 +1,11 @@
+F:\机构\YCF_Server\Model\obj\Debug\Model.csproj.CoreCompileInputs.cache
+F:\机构\YCF_Server\Model\bin\Debug\YCF_Server.Model.dll
+F:\机构\YCF_Server\Model\bin\Debug\YCF_Server.Model.pdb
+F:\机构\YCF_Server\Model\obj\Debug\YCF_Server.Model.dll
+F:\机构\YCF_Server\Model\obj\Debug\YCF_Server.Model.pdb
+F:\GogsGit\YCF_Server\Model\bin\Debug\YCF_Server.Model.dll
+F:\GogsGit\YCF_Server\Model\bin\Debug\YCF_Server.Model.pdb
+F:\GogsGit\YCF_Server\Model\obj\Debug\Model.csproj.CoreCompileInputs.cache
+F:\GogsGit\YCF_Server\Model\obj\Debug\YCF_Server.Model.dll
+F:\GogsGit\YCF_Server\Model\obj\Debug\YCF_Server.Model.pdb
+F:\GogsGit\YCF_Server\Model\obj\Debug\Model.csprojResolveAssemblyReference.cache

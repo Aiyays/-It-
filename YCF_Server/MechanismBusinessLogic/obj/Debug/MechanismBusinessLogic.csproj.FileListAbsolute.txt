@@ -1,0 +1,6 @@
+F:\GogsGit\YCF_Server\MechanismBusinessLogic\bin\Debug\MechanismBusinessLogic.dll
+F:\GogsGit\YCF_Server\MechanismBusinessLogic\bin\Debug\MechanismBusinessLogic.pdb
+F:\GogsGit\YCF_Server\MechanismBusinessLogic\obj\Debug\MechanismBusinessLogic.csprojResolveAssemblyReference.cache
+F:\GogsGit\YCF_Server\MechanismBusinessLogic\obj\Debug\MechanismBusinessLogic.csproj.CoreCompileInputs.cache
+F:\GogsGit\YCF_Server\MechanismBusinessLogic\obj\Debug\MechanismBusinessLogic.dll
+F:\GogsGit\YCF_Server\MechanismBusinessLogic\obj\Debug\MechanismBusinessLogic.pdb
