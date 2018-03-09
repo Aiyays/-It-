@@ -27,7 +27,7 @@ namespace YCF_ServerTo1703
         public static Dictionary<string, string> dictSql
         {
             get { lock (b) { return DictSql; } }
-            set { lock (b) { dictSql = value; } }
+            private set { lock (b) { dictSql = value; } }
         }
 
         //socket
@@ -39,7 +39,7 @@ namespace YCF_ServerTo1703
 
 
             //数据库连接字符串
-            DbHelperSQL.connectionString = "Data Source = 192.168.0.135,1433;Initial Catalog = YCFServer;User Id = sa;Password = sqlpass;";
+            //  DbHelperSQL.connectionString = "Data Source = 192.168.0.135,1433;Initial Catalog = YCFServer;User Id = sa;Password = sqlpass;";
 
             Console.WriteLine(DateTime.Now.ToString() + " => Server Starting……");
 
@@ -69,29 +69,9 @@ namespace YCF_ServerTo1703
             object[] obj = (object[])Json.JsonToObject(reStr, new object[10]);
             string userID = obj[0].ToString();
             string op_ID = obj[1].ToString();
-
-            if (dictUser.ContainsKey(userID)&&dictSql.ContainsKey(op_ID))
+            bool control = dictUser.ContainsKey(userID) ? dictUser[userID] == handle ? true : false : false;
+            if (control)
             {
-                #region 更新用户字典
-
-                if (dictUser[userID] != handle)
-                {
-                    try
-                    {
-                        if (dictUser[userID].Connected)
-                        {
-                            //强制下线
-                            dictUser[userID].Send(Encoding.UTF8.GetBytes(Json.ObjectToJson(new object[] { "CompulsoryDownline", "您的帐号在别处登录，如果非您本人操作，请及时修改密码"})));
-                            dictUser[userID].Close();
-                        }
-                        dictUser[userID].Dispose();
-                    }
-                    catch { }
-                    //更新用户Socket字典
-                    dictUser[userID] = handle;
-                }
-
-                #endregion
                 switch (obj.Length)
                 {
                     case 3:
@@ -116,17 +96,14 @@ namespace YCF_ServerTo1703
                         new MethodReflection().Call(obj[1].ToString(), obj[0], obj[2], obj[3], obj[4], obj[5], obj[6], obj[7]);
                         break;
                     default:
-                        Debug.Print("接收到异常信息:"+ reStr);
+                        Debug.Print("接收到无法解析的非法字符串:" + reStr);
                         break;
                 }
-
             }
             else
             {
-                dictUser.Add(userID, handle);
-                ///@@000054["18982226637","","18982226637","123456"]
-                new ServerToClient().Land(obj[2].ToString(),obj[3].ToString());
-               // Console.WriteLine(DateTime.Now.ToString() + " => 用户登陆 [" + handle.RemoteEndPoint.ToString() + "]=[" + userID + "]");
+                new ServerToClient().Land(obj[2].ToString(), obj[3].ToString(), ref DictSql,ref DictUser,ref handle);
+                Console.WriteLine(DateTime.Now.ToString() + " => 用户尝试登陆 [" + handle.RemoteEndPoint.ToString() + "]=[" + userID + "]");
             }
 
 

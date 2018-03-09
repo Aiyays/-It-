@@ -22,6 +22,7 @@ namespace YCF_Server.Model
 			set{ _uoid=value;}
 			get{return _uoid;}
 		}
+
 		/// <summary>
 		/// 外键-用户ID
 		/// </summary>

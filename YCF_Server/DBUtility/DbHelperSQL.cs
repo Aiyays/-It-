@@ -15,9 +15,29 @@ namespace Maticsoft.DBUtility
     public abstract class DbHelperSQL
     {
         //数据库连接字符串(web.config来配置)，多数据库可使用DbHelperSQLP来实现.
-        public static string connectionString = "";     		
+        private static string connectionString = "";
+
+        /// <summary>
+        /// 云服务数据库开启
+        /// </summary>
+        public static void SetSqlDatabase() => connectionString = "Data Source = 192.168.0.136,1433;Initial Catalog = YCFServer;User Id = sa;Password = sqlpass;";
+
+        /// <summary>
+        /// 机构端数据库开启
+        /// </summary>
+        /// <param name="sql"></param>
+        public static void SetSqlDAtabase(string sql) => connectionString = sql;
+
+        /// <summary>
+        /// 生成可执行的数据库开启串
+        /// </summary>
+        /// <param name="operatorDatabaseModel"></param>
+        /// <returns></returns>
+        public static string BuildSqlDatabase(YCF_Server.Model.OperatorDatabase operatorDatabaseModel) =>  connectionString = "Data Source = "+operatorDatabaseModel.DataHost+","+operatorDatabaseModel.DataPort+";Initial Catalog = "+operatorDatabaseModel.DataName+";User Id = "+operatorDatabaseModel.UserName+";Password = "+operatorDatabaseModel.UserPassword+";";
+
         public DbHelperSQL()
-        {            
+        {
+
         }
 
         #region 公用方法
@@ -171,8 +191,8 @@ namespace Maticsoft.DBUtility
                 }
             }
         }
-      
-          /// <summary>
+
+        /// <summary>
         /// 执行多条SQL语句，实现数据库事务。
         /// </summary>
         /// <param name="SQLStringList">多条SQL语句</param>		
@@ -386,7 +406,7 @@ namespace Maticsoft.DBUtility
             catch (System.Data.SqlClient.SqlException e)
             {
                 throw e;
-            }   
+            }
 
         }
         /// <summary>
@@ -511,14 +531,15 @@ namespace Maticsoft.DBUtility
                 {
                     SqlCommand cmd = new SqlCommand();
                     try
-                    { int count = 0;
+                    {
+                        int count = 0;
                         //循环
                         foreach (CommandInfo myDE in cmdList)
                         {
                             string cmdText = myDE.CommandText;
                             SqlParameter[] cmdParms = (SqlParameter[])myDE.Parameters;
                             PrepareCommand(cmd, conn, trans, cmdText, cmdParms);
-                           
+
                             if (myDE.EffentNextType == EffentNextType.WhenHaveContine || myDE.EffentNextType == EffentNextType.WhenNoHaveContine)
                             {
                                 if (myDE.CommandText.ToLower().IndexOf("count(") == -1)
@@ -797,7 +818,7 @@ namespace Maticsoft.DBUtility
             command.CommandType = CommandType.StoredProcedure;
             returnReader = command.ExecuteReader(CommandBehavior.CloseConnection);
             return returnReader;
-            
+
         }
 
 

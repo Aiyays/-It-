@@ -3,7 +3,7 @@ using  System.Data;
 using  System.Collections.Generic;
  
 using  YCF_Server.Model;
-namespace Maticsoft.BLL
+namespace YCF_Server.BLL
 {
 	/// <summary>
 	/// 用户与机构的关联表
