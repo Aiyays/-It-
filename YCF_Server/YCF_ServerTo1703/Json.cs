@@ -8,6 +8,8 @@ using System.Threading.Tasks;
 using Newtonsoft.Json;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.Data;
+using System.Drawing;
+
 namespace YCF_ServerTo1703
 {
     public class Json
@@ -93,6 +95,86 @@ namespace YCF_ServerTo1703
 
 
         #endregion
+
+
+        #region 对于图片的相互转换
+
+        /// <summary>
+        /// img转byte
+        /// </summary>
+        /// <param name="img"></param>
+        /// <returns></returns>
+        public byte[] GetByToImage(Image img)
+        {
+            byte[] bt = null;
+            if (!img.Equals(null))
+            {
+                using (MemoryStream mostream = new MemoryStream())
+                {
+                    Bitmap bmp = new Bitmap(img);
+                    bmp.Save(mostream, System.Drawing.Imaging.ImageFormat.Bmp);//将图像以指定的格式存入缓存内存流
+                    bt = new byte[mostream.Length];
+                    mostream.Position = 0;//设置留的初始位置
+                    mostream.Read(bt, 0, Convert.ToInt32(bt.Length));
+                }
+            }
+
+
+            return bt;
+        }
+
+        /// <summary>
+        /// byte转img
+        /// </summary>
+        /// <param name="bytes"></param>
+        /// <returns></returns>
+        public static Image GetImageToBytes(byte[] bytes)
+        {
+            Image photo = null;
+            using (MemoryStream ms = new MemoryStream(bytes))
+            {
+                ms.Write(bytes, 0, bytes.Length);
+                photo = Image.FromStream(ms, true);
+            }
+
+            return photo;
+
+
+        }
+
+
+        public static Image GetImage(string ImageRoute)
+        {
+            return Image.FromFile(ImageRoute);
+        }
+
+        /// <summary>
+        /// 存出到本地路径
+        /// </summary>
+        /// <param name="image"></param>
+        /// <param name="name"></param>
+        public static void SaveImage(Image image, string name)
+        {
+            DateTime a = DateTime.Now;
+            string Dir = @"..\" + a.Year + a.Month + a.Day;
+            if (!Directory.Exists(Dir)) Directory.CreateDirectory(Dir);
+            
+            image.Save(Dir+@"\"+name+".jpg", System.Drawing.Imaging.ImageFormat.Jpeg);
+
+        }
+
+        //判断地址是否存在文件夹
+        public static void asd(string txtFileSaveDir)
+        {
+            if (!Directory.Exists(txtFileSaveDir))//若文件夹不存在则新建文件夹   
+            {
+                Directory.CreateDirectory(txtFileSaveDir); //新建文件夹   
+            }
+        }
+
+
+        #endregion
+
 
 
     }

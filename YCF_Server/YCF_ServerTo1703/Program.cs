@@ -62,8 +62,6 @@ namespace YCF_ServerTo1703
         static void OnReceive(Socket handle, string reStr)
         {
 
-            //@@000054["帐号","机构id","方法名","参数1","参数二"]
-            //@@000054["18982226637","2","Login","18982226637","123456"]
             Debug.Print("接收到客户端:" + reStr);
             reStr = reStr.Substring(8);
             object[] obj = (object[])Json.JsonToObject(reStr, new object[10]);
@@ -75,25 +73,25 @@ namespace YCF_ServerTo1703
                 switch (obj.Length)
                 {
                     case 3:
-                        new MethodReflection().Call(obj[1].ToString(), obj[0]);
+                        new MethodReflection().Call(obj[2].ToString(), obj[0],obj[1]);
                         break;
                     case 4:
-                        new MethodReflection().Call(obj[1].ToString(), obj[0], obj[2]);
+                        new MethodReflection().Call(obj[2].ToString(), obj[0], obj[1],obj[3]);
                         break;
                     case 5:
-                        new MethodReflection().Call(obj[1].ToString(), obj[0], obj[2], obj[3]);
+                        new MethodReflection().Call(obj[2].ToString(), obj[0], obj[1], obj[3],obj[4]);
                         break;
                     case 6:
-                        new MethodReflection().Call(obj[1].ToString(), obj[0], obj[2], obj[3], obj[4]);
+                        new MethodReflection().Call(obj[2].ToString(), obj[0], obj[1], obj[3], obj[4],obj[5]);
                         break;
                     case 7:
-                        new MethodReflection().Call(obj[1].ToString(), obj[0], obj[2], obj[3], obj[4], obj[5]);
+                        new MethodReflection().Call(obj[2].ToString(), obj[0], obj[1], obj[3], obj[4], obj[5],obj[6]);
                         break;
                     case 8:
-                        new MethodReflection().Call(obj[1].ToString(), obj[0], obj[2], obj[3], obj[4], obj[5], obj[6]);
+                        new MethodReflection().Call(obj[2].ToString(), obj[0], obj[1], obj[3], obj[4], obj[5], obj[6],obj[7]);
                         break;
                     case 9:
-                        new MethodReflection().Call(obj[1].ToString(), obj[0], obj[2], obj[3], obj[4], obj[5], obj[6], obj[7]);
+                        new MethodReflection().Call(obj[2].ToString(), obj[0], obj[1], obj[3], obj[4], obj[5], obj[6], obj[7],obj[8]);
                         break;
                     default:
                         Debug.Print("接收到无法解析的非法字符串:" + reStr);
@@ -102,7 +100,7 @@ namespace YCF_ServerTo1703
             }
             else
             {
-                new ServerToClient().Land(obj[2].ToString(), obj[3].ToString(), ref DictSql,ref DictUser,ref handle);
+                new ServerToClient().AskLand(obj[2].ToString(), obj[3].ToString(), ref DictSql,ref DictUser,ref handle);
                 Console.WriteLine(DateTime.Now.ToString() + " => 用户尝试登陆 [" + handle.RemoteEndPoint.ToString() + "]=[" + userID + "]");
             }
 

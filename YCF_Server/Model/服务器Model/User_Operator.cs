@@ -40,7 +40,7 @@ namespace YCF_Server.Model
 			get{return _oid;}
 		}
 		/// <summary>
-		/// 是否在院
+		/// 是否在院  
 		/// </summary>
 		public int ISHospitalization
 		{

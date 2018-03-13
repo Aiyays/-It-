@@ -34,6 +34,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -72,6 +73,10 @@
     <ProjectReference Include="..\Model\Model.csproj">
       <Project>{53995dbb-9836-4647-ad22-865884fdeb9e}</Project>
       <Name>Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\YCF_ServerTo1703\YCF_ServerTo1703.csproj">
+      <Project>{82cc8305-2a6c-4a99-ace4-0125b40e7e34}</Project>
+      <Name>YCF_ServerTo1703</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

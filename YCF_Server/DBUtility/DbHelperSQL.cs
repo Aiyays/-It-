@@ -26,14 +26,14 @@ namespace Maticsoft.DBUtility
         /// 机构端数据库开启
         /// </summary>
         /// <param name="sql"></param>
-        public static void SetSqlDAtabase(string sql) => connectionString = sql;
+        public static void SetSqlDatabase(string sql) => connectionString = sql;
 
         /// <summary>
         /// 生成可执行的数据库开启串
         /// </summary>
         /// <param name="operatorDatabaseModel"></param>
         /// <returns></returns>
-        public static string BuildSqlDatabase(YCF_Server.Model.OperatorDatabase operatorDatabaseModel) =>  connectionString = "Data Source = "+operatorDatabaseModel.DataHost+","+operatorDatabaseModel.DataPort+";Initial Catalog = "+operatorDatabaseModel.DataName+";User Id = "+operatorDatabaseModel.UserName+";Password = "+operatorDatabaseModel.UserPassword+";";
+        public static string BuildSqlDatabase(YCF_Server.Model.OperatorDatabase operatorDatabaseModel) => connectionString = "Data Source = " + operatorDatabaseModel.DataHost + "," + operatorDatabaseModel.DataPort + ";Initial Catalog = " + operatorDatabaseModel.DataName + ";User Id = " + operatorDatabaseModel.UserName + ";Password = " + operatorDatabaseModel.UserPassword + ";";
 
         public DbHelperSQL()
         {

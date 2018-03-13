@@ -20,3 +20,9 @@ F:\GogsGit\YCF_Server\Test\obj\Debug\Test.csprojResolveAssemblyReference.cache
 F:\GogsGit\YCF_Server\Test\obj\Debug\Test.csproj.CoreCompileInputs.cache
 F:\GogsGit\YCF_Server\Test\obj\Debug\Test.exe
 F:\GogsGit\YCF_Server\Test\obj\Debug\Test.pdb
+F:\GogsGit\YCF_Server\Test\bin\Debug\YCF_ServerTo1703.exe
+F:\GogsGit\YCF_Server\Test\bin\Debug\GD_AlarmCenter.SocketServer.dll
+F:\GogsGit\YCF_Server\Test\bin\Debug\Newtonsoft.Json.dll
+F:\GogsGit\YCF_Server\Test\bin\Debug\YCF_ServerTo1703.pdb
+F:\GogsGit\YCF_Server\Test\bin\Debug\GD_AlarmCenter.SocketServer.pdb
+F:\GogsGit\YCF_Server\Test\bin\Debug\Newtonsoft.Json.xml

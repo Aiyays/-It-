@@ -46,14 +46,14 @@ namespace YCF_Server.DAL
 		{
 			StringBuilder strSql=new StringBuilder();
 			strSql.Append("insert into UserPrivilege(");
-			strSql.Append("URID,MID)");
+			strSql.Append("RID,MID)");
 			strSql.Append(" values (");
-			strSql.Append("@URID,@MID)");
+			strSql.Append("@RID,@MID)");
 			strSql.Append(";select @@IDENTITY");
 			SqlParameter[] parameters = {
-					new SqlParameter("@URID", SqlDbType.Int,4),
+					new SqlParameter("@RID", SqlDbType.Int,4),
 					new SqlParameter("@MID", SqlDbType.Int,4)};
-			parameters[0].Value = model.URID;
+			parameters[0].Value = model.RID;
 			parameters[1].Value = model.MID;
 
 			object obj = DbHelperSQL.GetSingle(strSql.ToString(),parameters);
@@ -73,14 +73,14 @@ namespace YCF_Server.DAL
 		{
 			StringBuilder strSql=new StringBuilder();
 			strSql.Append("update UserPrivilege set ");
-			strSql.Append("URID=@URID,");
+			strSql.Append("RID=@RID,");
 			strSql.Append("MID=@MID");
 			strSql.Append(" where ID=@ID");
 			SqlParameter[] parameters = {
-					new SqlParameter("@URID", SqlDbType.Int,4),
+					new SqlParameter("@RID", SqlDbType.Int,4),
 					new SqlParameter("@MID", SqlDbType.Int,4),
 					new SqlParameter("@ID", SqlDbType.Int,4)};
-			parameters[0].Value = model.URID;
+			parameters[0].Value = model.RID;
 			parameters[1].Value = model.MID;
 			parameters[2].Value = model.ID;
 
@@ -146,7 +146,7 @@ namespace YCF_Server.DAL
 		{
 			
 			StringBuilder strSql=new StringBuilder();
-			strSql.Append("select  top 1 ID,URID,MID from UserPrivilege ");
+			strSql.Append("select  top 1 ID,RID,MID from UserPrivilege ");
 			strSql.Append(" where ID=@ID");
 			SqlParameter[] parameters = {
 					new SqlParameter("@ID", SqlDbType.Int,4)
@@ -178,9 +178,9 @@ namespace YCF_Server.DAL
 				{
 					model.ID=int.Parse(row["ID"].ToString());
 				}
-				if(row["URID"]!=null && row["URID"].ToString()!="")
+				if(row["RID"]!=null && row["RID"].ToString()!="")
 				{
-					model.URID=int.Parse(row["URID"].ToString());
+					model.RID=int.Parse(row["RID"].ToString());
 				}
 				if(row["MID"]!=null && row["MID"].ToString()!="")
 				{
@@ -196,7 +196,7 @@ namespace YCF_Server.DAL
 		public DataSet GetList(string strWhere)
 		{
 			StringBuilder strSql=new StringBuilder();
-			strSql.Append("select ID,URID,MID ");
+			strSql.Append("select ID,RID,MID ");
 			strSql.Append(" FROM UserPrivilege ");
 			if(strWhere.Trim()!="")
 			{
@@ -216,7 +216,7 @@ namespace YCF_Server.DAL
 			{
 				strSql.Append(" top "+Top.ToString());
 			}
-			strSql.Append(" ID,URID,MID ");
+			strSql.Append(" ID,RID,MID ");
 			strSql.Append(" FROM UserPrivilege ");
 			if(strWhere.Trim()!="")
 			{

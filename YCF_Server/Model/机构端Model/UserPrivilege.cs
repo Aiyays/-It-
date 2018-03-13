@@ -24,7 +24,7 @@ namespace YCF_Server.Model
 		/// <summary>
 		/// 机构用户角色关系表ID-外键
 		/// </summary>
-		public int URID
+		public int RID
 		{
 			set{ _urid=value;}
 			get{return _urid;}

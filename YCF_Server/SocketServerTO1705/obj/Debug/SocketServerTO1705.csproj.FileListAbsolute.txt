@@ -4,4 +4,3 @@ F:\GogsGit\YCF_Server\SocketServerTO1705\bin\Debug\SocketServer.pdb
 F:\GogsGit\YCF_Server\SocketServerTO1705\obj\Debug\SocketServerTO1705.csproj.CoreCompileInputs.cache
 F:\GogsGit\YCF_Server\SocketServerTO1705\obj\Debug\SocketServer.exe
 F:\GogsGit\YCF_Server\SocketServerTO1705\obj\Debug\SocketServer.pdb
-F:\GogsGit\YCF_Server\SocketServerTO1705\obj\Debug\SocketServerTO1705.csprojResolveAssemblyReference.cache

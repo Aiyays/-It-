@@ -27,6 +27,8 @@
 
         public void Call(string MethodName, object a, object b, object c, object d, object e, object f, object g) => Common(MethodName, new object[] { a, b, c, d, e, f, g });
 
+        public void Call(string MethodName, object a, object b, object c, object d, object e, object f, object g ,object h) => Common(MethodName, new object[] { a, b, c, d, e, f, g,h });
+
         #endregion
 
     }

@@ -22,6 +22,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MechanismBusinessLogic", "M
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test", "Test\Test.csproj", "{9BDBA458-23D0-4D43-86E5-2A4059F30B3D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsFormsApp1", "WindowsFormsApp1\WindowsFormsApp1.csproj", "{0641908B-B6ED-44C2-B64A-AD3879E08E58}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|.NET = Debug|.NET
@@ -142,6 +144,18 @@ Global
 		{9BDBA458-23D0-4D43-86E5-2A4059F30B3D}.Release|Any CPU.Build.0 = Release|Any CPU
 		{9BDBA458-23D0-4D43-86E5-2A4059F30B3D}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{9BDBA458-23D0-4D43-86E5-2A4059F30B3D}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{0641908B-B6ED-44C2-B64A-AD3879E08E58}.Debug|.NET.ActiveCfg = Debug|Any CPU
+		{0641908B-B6ED-44C2-B64A-AD3879E08E58}.Debug|.NET.Build.0 = Debug|Any CPU
+		{0641908B-B6ED-44C2-B64A-AD3879E08E58}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0641908B-B6ED-44C2-B64A-AD3879E08E58}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0641908B-B6ED-44C2-B64A-AD3879E08E58}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{0641908B-B6ED-44C2-B64A-AD3879E08E58}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{0641908B-B6ED-44C2-B64A-AD3879E08E58}.Release|.NET.ActiveCfg = Release|Any CPU
+		{0641908B-B6ED-44C2-B64A-AD3879E08E58}.Release|.NET.Build.0 = Release|Any CPU
+		{0641908B-B6ED-44C2-B64A-AD3879E08E58}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0641908B-B6ED-44C2-B64A-AD3879E08E58}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0641908B-B6ED-44C2-B64A-AD3879E08E58}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{0641908B-B6ED-44C2-B64A-AD3879E08E58}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
